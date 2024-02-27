@@ -28,7 +28,7 @@
                             <label class="caption  blue--text" style="">Esqueceu sua senha?</label>
                           </v-col>
                         </v-row>
-                        <v-btn color="blue" dark block tile>Login</v-btn>
+                        <v-btn color="blue" @click="login" dark block tile>Login</v-btn>
                         <br />
                         <div class="d-flex justify-space-between align-center mx-10 mb-16">
                           <v-btn depressed outlined color="grey">
@@ -118,6 +118,11 @@
     components: {
       
     },
+    methods:{
+    login () {
+      this.$router.push({name:'home'})
+    }
+    }
   }
 </script>
 <style scoped>
